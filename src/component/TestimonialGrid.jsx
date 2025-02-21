@@ -4,18 +4,24 @@ import { DeleteIcon } from '@chakra-ui/icons';
 import profile from '../assets/profile.png';
 import Pagination from './common/Pagination';
 
+const gradients = [
+  "linear(to-r, orange.400, yellow.300)",
+  "linear(to-r, red.400, pink.300)",
+  "linear(to-r, green.500, yellow.500)",
+  "linear(to-r, teal.400, cyan.300)",
+  "linear(to-r, purple.400, blue.300)"
+];
+
 const TestimonialGrid = () => {
   const [testimonials, setTestimonials] = useState([
-    { name: "John Doe", avatar: "https://via.placeholder.com/50", description: "Great service and reliable!" },
-    { name: "Jane Smith", avatar: "https://via.placeholder.com/50", description: "A very professional experience!" },
-    { name: "Mike Johnson", avatar: "https://via.placeholder.com/50", description: "Highly recommend for anyone looking for a new property." },
-    { name: "Emily Davis", avatar: "https://via.placeholder.com/50", description: "Amazing team, they helped me find the perfect home." },
-    { name: "Chris Lee", avatar: "https://via.placeholder.com/50", description: "Fantastic customer service, made buying easy." },
-    { name: "Sarah Brown", avatar: "https://via.placeholder.com/50", description: "Knowledgeable and friendly agents." },
-    { name: "David Wilson", avatar: "https://via.placeholder.com/50", description: "A seamless process from start to finish." },
-    { name: "Laura Miller", avatar: "https://via.placeholder.com/50", description: "The best real estate experience I've had!" },
-    { name: "James Anderson", avatar: "https://via.placeholder.com/50", description: "Trustworthy agents with great advice." },
-    { name: "Olivia Taylor", avatar: "https://via.placeholder.com/50", description: "Very happy with my new home, thank you!" }
+    { name: "Amit Sharma", avatar: "https://via.placeholder.com/50", description: "The best quality dry fruits I've ever had! Fresh and delicious!" },
+    { name: "Priya Kapoor", avatar: "https://via.placeholder.com/50", description: "Amazing nuts and great packaging. Highly recommend MyStore!" },
+    { name: "Rahul Verma", avatar: "https://via.placeholder.com/50", description: "Premium quality almonds and cashews at the best prices!" },
+    { name: "Sneha Mehta", avatar: "https://via.placeholder.com/50", description: "Super fresh and tasty dry fruits. Love their customer service!" },
+    { name: "Vikram Malhotra", avatar: "https://via.placeholder.com/50", description: "Best pistachios and walnuts I've ever purchased!" },
+    { name: "Neha Singh", avatar: "https://via.placeholder.com/50", description: "Their dried figs are just amazing. So fresh and natural!" },
+    { name: "Arjun Patel", avatar: "https://via.placeholder.com/50", description: "Great variety and top-notch quality. Always my go-to store!" },
+    { name: "Rohit Desai", avatar: "https://via.placeholder.com/50", description: "Healthy and delicious dry fruits at reasonable prices!" }
   ]);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,17 +40,12 @@ const TestimonialGrid = () => {
   };
 
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
-
-  
   const currentTestimonials = testimonials.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <Box ml={'10px'}>
-      <Button onClick={onOpen} colorScheme="teal" mb={4}>Add Testimonial</Button>
+      <Button onClick={onOpen} colorScheme="orange" mb={4}>Add Testimonial</Button>
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {currentTestimonials.map((item, index) => (
           <Box
@@ -52,7 +53,7 @@ const TestimonialGrid = () => {
             p={5}
             borderWidth="1px"
             borderRadius="lg"
-            bgGradient="linear(to-r, teal.500, blue.500)"
+            bgGradient={gradients[index % gradients.length]}
             color="white"
             position="relative"
           >
@@ -107,7 +108,7 @@ const TestimonialGrid = () => {
                 onChange={(e) => setTestimonial({ ...testimonial, description: e.target.value })}
               />
             </FormControl>
-            <Button colorScheme="teal" onClick={handleAddTestimonial}>Add Testimonial</Button>
+            <Button colorScheme="orange" onClick={handleAddTestimonial}>Add Testimonial</Button>
           </ModalBody>
         </ModalContent>
       </Modal>

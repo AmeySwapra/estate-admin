@@ -21,113 +21,111 @@ import {
 } from "@chakra-ui/react";
 import { FaEdit, FaTrashAlt, FaPlus } from "react-icons/fa";
 
-import h1 from "../assets/images/h1.jpeg";
-import h2 from "../assets/images/h2.jpeg";
-import h3 from "../assets/images/h3.jpg";
-import h4 from "../assets/images/h4.jpg";
-import h5 from "../assets/images/h5.jpg";
-import h6 from "../assets/images/h6.jpeg";
-import h7 from "../assets/images/h7.jpeg";
-import h8 from "../assets/images/h8.jpeg";
-import h9 from "../assets/images/h9.jpeg";
-import h10 from "../assets/images/h10.jpeg";
 import Pagination from "./common/Pagination";
 
 const BlogList = () => {
-  // Initial blogs data
   const [blogs, setBlogs] = useState([
     {
       id: 1,
-      title: "Top 5 Tips for First-Time Home Buyers",
-      image: h1,
+      title: "Top 5 Health Benefits of Eating Dry Fruits Daily",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS13HjehIBhiVDwKqYhwe-b3RBUWmL4-fDgnw&s",
       overview:
-        "Buying your first home can be overwhelming. Here are 5 essential tips to help you navigate the process with confidence.",
+        "Dry fruits are packed with nutrients and offer numerous health benefits. Here are the top 5 reasons to include them in your daily diet.",
       detailDescription:
-        "Buying your first home is an exciting milestone, but it can also be overwhelming. To help you navigate the process, here are five essential tips: 1. **Determine Your Budget**: Before you start looking at homes, figure out how much you can afford. Use online calculators to estimate your monthly mortgage payments. 2. **Get Pre-Approved for a Mortgage**: A pre-approval letter shows sellers that you’re a serious buyer and can give you an edge in competitive markets. 3. **Work with a Real Estate Agent**: A good agent can guide you through the process, negotiate on your behalf, and help you find the right home. 4. **Research Neighborhoods**: Consider factors like schools, commute times, and future development when choosing a location. 5. **Don’t Skip the Home Inspection**: A professional inspection can uncover potential issues and save you from costly repairs down the road. By following these tips, you’ll be well-prepared to make one of the biggest financial decisions of your life.",
+        "Dry fruits are a powerhouse of nutrients, offering a wide range of health benefits. Here are the top 5 reasons to include them in your daily diet: 1. **Rich in Antioxidants**: Dry fruits like almonds, walnuts, and raisins are loaded with antioxidants that help fight free radicals and reduce oxidative stress. 2. **Boosts Heart Health**: Many dry fruits, such as pistachios and cashews, are rich in healthy fats that support cardiovascular health. 3. **Improves Digestion**: Prunes and figs are excellent sources of dietary fiber, which aids in digestion and prevents constipation. 4. **Enhances Energy Levels**: Dry fruits like dates and apricots are high in natural sugars and provide a quick energy boost. 5. **Supports Immune System**: Dry fruits are packed with essential vitamins and minerals, such as vitamin E and zinc, which strengthen the immune system. Incorporating a handful of dry fruits into your daily routine can significantly improve your overall health.",
     },
     {
       id: 2,
-      title: "How to Stage Your Home for a Quick Sale",
-      image: h4,
+      title: "How to Store Dry Fruits to Maintain Freshness",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUvLG20ktzztz7RmOFjs-dNo34TufNIT1OA&s",
       overview:
-        "Staging your home can make it more appealing to buyers and help you sell faster. Learn the best staging tips here.",
+        "Proper storage is key to preserving the freshness and nutritional value of dry fruits. Learn the best storage tips here.",
       detailDescription:
-        "Staging your home is one of the most effective ways to attract buyers and sell your property quickly. Start by decluttering and depersonalizing your space to help buyers envision themselves living there. Rearrange furniture to create an open and inviting layout, and add fresh coats of neutral paint to brighten up rooms. Don’t forget about curb appeal—clean up the exterior, trim the lawn, and add potted plants to create a welcoming entrance. Finally, consider hiring a professional stager to maximize your home’s potential. With these tips, you’ll be well on your way to a quick and successful sale.",
+        "Storing dry fruits correctly is essential to maintain their freshness, flavor, and nutritional value. Keep them in airtight containers to prevent exposure to moisture, which can lead to spoilage. Store the containers in a cool, dark place, such as a pantry or cupboard, away from direct sunlight. For longer shelf life, you can refrigerate or freeze dry fruits, especially in humid climates. Always check for signs of mold or rancidity before consumption. By following these storage tips, you can enjoy your dry fruits at their best for months.",
     },
     {
       id: 3,
-      title: "The Pros and Cons of Investing in Rental Properties",
-      image: h5,
+      title: "The Pros and Cons of Including Nuts in Your Diet",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQvxbtw5kEkxbm4liS2g8gzxKB2BBjYQQ2cA&s",
       overview:
-        "Investing in rental properties can be lucrative, but it’s not without risks. Here’s what you need to know before diving in.",
+        "Nuts are a healthy snack, but they come with their own set of advantages and disadvantages. Here’s what you need to know.",
       detailDescription:
-        "Investing in rental properties can provide a steady stream of passive income and long-term wealth-building opportunities. However, it’s not without its challenges. On the plus side, rental properties can generate consistent cash flow, offer tax benefits, and appreciate in value over time. On the downside, being a landlord comes with responsibilities like property maintenance, tenant management, and dealing with vacancies. Additionally, market fluctuations can impact your returns. Before investing, thoroughly research the market, crunch the numbers, and consider working with a property management company to handle day-to-day operations. With careful planning, rental properties can be a rewarding investment.",
+        "Nuts are a popular and nutritious snack, but they have both pros and cons. On the positive side, nuts like almonds, walnuts, and cashews are rich in healthy fats, protein, and fiber, making them great for heart health and weight management. They also provide essential vitamins and minerals, such as magnesium and vitamin E. However, nuts are calorie-dense, so portion control is important to avoid overeating. Some people may also have allergies to certain nuts, which can be severe. Additionally, salted or flavored nuts may contain added sugars and sodium, which can negate their health benefits. Moderation and mindful consumption are key to enjoying the benefits of nuts.",
     },
     {
       id: 4,
-      title: "Understanding Mortgage Rates: Fixed vs. Adjustable",
-      image: h9,
+      title: "Understanding the Difference Between Raw and Roasted Nuts",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUoNolsyrDzGIUKa6VEwtEesz-9gf5rBsyjQ&s",
       overview:
-        "Choosing between a fixed-rate and adjustable-rate mortgage can impact your finances for years. Learn the differences here.",
+        "Raw and roasted nuts each have their own unique benefits. Learn the differences and which one is better for you.",
       detailDescription:
-        "When it comes to mortgages, one of the biggest decisions you’ll face is choosing between a fixed-rate and an adjustable-rate mortgage (ARM). A fixed-rate mortgage offers stability, with the same interest rate and monthly payment for the life of the loan. This is ideal for buyers who plan to stay in their home long-term. On the other hand, an ARM typically starts with a lower interest rate that can fluctuate over time, based on market conditions. While this can save you money initially, it also introduces uncertainty. Consider your financial goals, risk tolerance, and how long you plan to stay in the home before making a decision. Consulting with a mortgage advisor can also help you choose the best option for your situation.",
+        "When it comes to nuts, you have the option of choosing raw or roasted varieties. Raw nuts are in their natural state, with no added oils or flavors, making them a healthier choice for those watching their calorie intake. They retain all their natural nutrients, including healthy fats and antioxidants. On the other hand, roasted nuts are often more flavorful and crunchy, but they may contain added oils, salts, or sugars. Roasting can also reduce some of the nutrient content, although it enhances the taste. Ultimately, the choice between raw and roasted nuts depends on your dietary preferences and health goals. Opt for unsalted and dry-roasted nuts if you prefer a healthier roasted option.",
     },
     {
       id: 5,
-      title: "The Benefits of Green Homes in Real Estate",
-      image: h7,
+      title: "The Benefits of Organic Dry Fruits",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VQ0JQYK73fJqrWvdDoTnBUrBK2rq28uZDg&s",
       overview:
-        "Green homes are becoming increasingly popular. Discover the benefits of eco-friendly living and how it impacts real estate.",
+        "Organic dry fruits are gaining popularity due to their health and environmental benefits. Discover why they’re worth the investment.",
       detailDescription:
-        "Green homes are designed to be energy-efficient, environmentally friendly, and sustainable. They offer numerous benefits, including lower utility bills, improved indoor air quality, and reduced environmental impact. Features like solar panels, energy-efficient appliances, and sustainable building materials can increase a home’s value and appeal to eco-conscious buyers. Additionally, many governments offer incentives and tax credits for green home improvements. As more buyers prioritize sustainability, green homes are becoming a smart investment in the real estate market. Whether you’re buying or selling, incorporating eco-friendly features can set your property apart and contribute to a healthier planet.",
+        "Organic dry fruits are produced without the use of synthetic pesticides, fertilizers, or genetically modified organisms (GMOs). They are a healthier choice as they are free from harmful chemicals and retain more of their natural nutrients. Organic farming practices are also better for the environment, promoting soil health and biodiversity. While organic dry fruits may be more expensive, their benefits—such as improved taste, higher nutrient content, and reduced exposure to toxins—make them a worthwhile investment for health-conscious consumers. Look for certified organic labels to ensure you’re getting genuine organic products.",
     },
     {
       id: 6,
-      title: "How to Choose the Right Real Estate Agent",
-      image: h10,
+      title: "How to Choose the Best Quality Dry Fruits",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQAfaJ97kp1W-YkmkYYbAtwndk2rCguKRkWg&s",
       overview:
-        "A good real estate agent can make all the difference in your home-buying or selling experience. Here’s how to find the right one.",
+        "Not all dry fruits are created equal. Here’s how to select the best quality dry fruits for your needs.",
       detailDescription:
-        "Choosing the right real estate agent is crucial to a successful home-buying or selling experience. Start by asking for recommendations from friends, family, or colleagues who have recently worked with an agent. Look for someone with experience in your local market and a proven track record of success. Interview multiple agents to gauge their communication style, responsiveness, and knowledge. Don’t be afraid to ask for references or read online reviews. A good agent will listen to your needs, provide honest advice, and guide you through every step of the process. Taking the time to find the right agent can save you time, money, and stress in the long run.",
+        "Choosing high-quality dry fruits can make a significant difference in taste and nutritional value. Look for dry fruits that are uniform in size, color, and texture. Avoid products with signs of mold, discoloration, or an off smell. Check the packaging for information on the source and processing methods. Opt for brands that prioritize natural drying processes and avoid added preservatives or artificial flavors. If possible, buy from reputable suppliers or organic stores. By paying attention to these details, you can ensure you’re getting the best quality dry fruits for your health and enjoyment.",
     },
     {
       id: 7,
-      title: "The Impact of Location on Property Value",
-      image: h2,
+      title: "The Role of Dry Fruits in Traditional Diets",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzkrPxK-ZPyQz0PpRNoOd0_q1yI8uGpgqUDA&s",
       overview:
-        "Location is one of the most critical factors in determining property value. Learn why it matters and how to choose the right location.",
+        "Dry fruits have been a staple in traditional diets for centuries. Learn about their cultural and nutritional significance.",
       detailDescription:
-        "The location of a property plays a significant role in its value and desirability. Factors like proximity to schools, public transportation, shopping centers, and employment hubs can greatly influence a property’s price. Additionally, neighborhoods with low crime rates, good infrastructure, and future development potential tend to appreciate in value over time. When buying a property, consider not only your current needs but also the long-term potential of the location. A well-chosen location can provide a higher return on investment and a better quality of life.",
+        "Dry fruits have played a vital role in traditional diets across various cultures for centuries. In Middle Eastern cuisine, dates are a symbol of hospitality and are often served with coffee. In Indian culture, dry fruits like almonds, cashews, and raisins are used in festive dishes and desserts. They are also a key component of Ayurvedic medicine, valued for their healing properties. Dry fruits are rich in essential nutrients, making them an excellent energy source, especially in regions with harsh climates. Their long shelf life and portability have made them a reliable food source for travelers and traders throughout history. Today, they continue to be celebrated for their cultural and nutritional significance.",
     },
     {
       id: 8,
-      title: "The Rise of Smart Homes in Real Estate",
-      image: h3,
+      title: "The Rise of Dry Fruits in the Health Food Industry",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthWiUpe0unRHUHaBk4lSxlIT5ueyK2Lx3jg&s",
       overview:
-        "Smart homes are revolutionizing the real estate market. Discover how technology is changing the way we live and buy homes.",
+        "Dry fruits are becoming a popular choice in the health food industry. Discover how they’re being incorporated into modern diets.",
       detailDescription:
-        "Smart homes, equipped with advanced technology like automated lighting, security systems, and energy-efficient appliances, are becoming increasingly popular among buyers. These features not only enhance convenience and security but also reduce energy consumption and utility costs. As more buyers prioritize technology-driven living, smart homes are becoming a key selling point in the real estate market. Whether you’re buying or selling, incorporating smart home features can increase your property’s value and appeal to tech-savvy buyers.",
+        "Dry fruits are gaining popularity in the health food industry due to their nutrient density and versatility. They are being incorporated into a variety of products, such as energy bars, granola, and trail mixes. Dry fruits are also used as natural sweeteners in smoothies, desserts, and baked goods. Their convenience and long shelf life make them a favorite among health-conscious consumers. Additionally, the growing demand for plant-based and gluten-free foods has further boosted their appeal. As more people recognize the health benefits of dry fruits, their presence in the health food market continues to grow.",
     },
     {
       id: 9,
-      title: "The Importance of Home Insurance",
-      image: h6,
+      title: "The Importance of Sourcing Ethically Produced Dry Fruits",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUvLG20ktzztz7RmOFjs-dNo34TufNIT1OA&s",
       overview:
-        "Home insurance is a crucial aspect of homeownership. Learn why it’s important and how to choose the right policy.",
+        "Ethical sourcing is crucial in the dry fruits industry. Learn why it matters and how to support sustainable practices.",
       detailDescription:
-        "Home insurance protects your property and belongings from unforeseen events like natural disasters, theft, and accidents. It also provides liability coverage in case someone is injured on your property. When choosing a policy, consider factors like coverage limits, deductibles, and additional riders for specific risks. A well-chosen home insurance policy can provide peace of mind and financial security, ensuring that you’re prepared for any unexpected events.",
+        "Ethical sourcing in the dry fruits industry ensures fair wages, safe working conditions, and environmentally friendly farming practices. Many dry fruits, such as cashews and almonds, are grown in developing countries where labor exploitation and environmental degradation are common issues. By choosing ethically sourced dry fruits, you support fair trade practices and contribute to the well-being of farmers and their communities. Look for certifications like Fair Trade, Rainforest Alliance, or Organic to ensure your purchase aligns with ethical standards. Supporting sustainable practices not only benefits the environment but also promotes social responsibility in the global supply chain.",
     },
     {
       id: 10,
-      title: "The Future of Real Estate: Trends to Watch",
-      image: h8,
+      title: "The Future of the Dry Fruits Industry: Trends to Watch",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS13HjehIBhiVDwKqYhwe-b3RBUWmL4-fDgnw&s",
       overview:
-        "The real estate industry is constantly evolving. Explore the latest trends shaping the future of real estate.",
+        "The dry fruits industry is evolving with changing consumer preferences. Explore the latest trends shaping its future.",
       detailDescription:
-        "The real estate industry is undergoing significant changes, driven by technology, sustainability, and shifting buyer preferences. Trends like virtual reality tours, blockchain-based transactions, and eco-friendly building materials are transforming the way we buy and sell homes. Additionally, the rise of remote work is influencing location preferences, with more buyers opting for suburban and rural areas. Staying informed about these trends can help you make smarter decisions and stay ahead in the ever-changing real estate market.",
+        "The dry fruits industry is undergoing significant changes, driven by health-conscious consumers and technological advancements. Trends like organic and ethically sourced products are gaining traction, as buyers prioritize sustainability and transparency. Innovations in packaging, such as resealable and eco-friendly options, are also shaping the market. Additionally, the rise of online shopping and direct-to-consumer brands is making dry fruits more accessible worldwide. As consumers continue to seek nutritious and convenient snacks, the dry fruits industry is poised for growth and innovation. Staying informed about these trends can help you make smarter choices and stay ahead in this dynamic market.",
     },
   ]);
-
 
   const {
     isOpen: isAddOpen,
@@ -139,7 +137,6 @@ const BlogList = () => {
     onOpen: onEditOpen,
     onClose: onEditClose,
   } = useDisclosure();
-
 
   const [newBlog, setNewBlog] = useState({
     title: "",
@@ -159,7 +156,7 @@ const BlogList = () => {
     const newId = blogs.length ? Math.max(...blogs.map((b) => b.id)) + 1 : 1;
     const blogToAdd = { ...newBlog, id: newId };
     setBlogs([...blogs, blogToAdd]);
-    
+
     setNewBlog({
       title: "",
       overview: "",
@@ -169,7 +166,6 @@ const BlogList = () => {
     onAddClose();
   };
 
-  
   const handleEditClick = (blog) => {
     setSelectedBlog(blog);
     onEditOpen();
@@ -192,7 +188,6 @@ const BlogList = () => {
     setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
   const totalPages = Math.ceil(blogs.length / itemsPerPage);
@@ -208,7 +203,12 @@ const BlogList = () => {
   return (
     <Box p={5}>
       {/* Add Blog Button */}
-      <Button leftIcon={<FaPlus />} colorScheme="blue" mb={6} onClick={onAddOpen}>
+      <Button
+        leftIcon={<FaPlus />}
+        colorScheme="blue"
+        mb={6}
+        onClick={onAddOpen}
+      >
         Add Blog
       </Button>
 
@@ -363,7 +363,11 @@ const BlogList = () => {
                     placeholder="Enter the detailed description"
                   />
                 </FormControl>
-                <Button colorScheme="blue" onClick={handleEditBlog} width="100%">
+                <Button
+                  colorScheme="blue"
+                  onClick={handleEditBlog}
+                  width="100%"
+                >
                   Save Changes
                 </Button>
               </>

@@ -18,11 +18,11 @@ const Header = () => {
       <Flex align="center">
         <Image src={logo} alt='swapra-realestate-logo' width={'100px'} />
         <Text fontSize="30px" ml={2}>
-          HomeVista Admin
+          MyStore Admin Panel
         </Text>
-        {/* <Button colorScheme="blue" ml="auto" onClick={openModal}>
+        <Button bg='green.500' color='white' ml="auto" onClick={openModal}>
           Sign In
-        </Button> */}
+        </Button>
       </Flex>
       <AuthModal isOpen={isModalOpen} onClose={closeModal} />
     </Box>

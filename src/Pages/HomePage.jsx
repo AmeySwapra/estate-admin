@@ -6,15 +6,18 @@ import Dashboard from '../component/Dashboard';
 
 function HomePage() {
   return (
-    <Flex height="100vh" > 
-      <Sidebar />
-      <Box flex="1" overflowY="hidden">  
+    <Flex height="100vh"> 
+      <Box height="100vh"> 
+        <Sidebar />
+      </Box>
+      <Box flex="1" display="flex" flexDirection="column" height="100vh" overflowY="auto">  
         <Header />
-        <Dashboard />
+        <Box flex="1" overflowY="auto"> 
+          <Dashboard />
+        </Box>
       </Box>
     </Flex>
   );
 }
 
 export default HomePage;
-

@@ -151,7 +151,7 @@ function AuthModal({ isOpen, onClose }) {
                     onChange={handleLoginChange}
                   />
                 </FormControl>
-                <Button colorScheme="teal" width="100%" mt={6} onClick={handleLoginSubmit}>
+                <Button color="white" bg='green.500' width="100%" mt={6} onClick={handleLoginSubmit}>
                   Login
                 </Button>
              
@@ -187,7 +187,7 @@ function AuthModal({ isOpen, onClose }) {
                     onChange={handleRegisterChange}
                   />
                 </FormControl>
-                <Button colorScheme="teal" width="100%" mt={6} onClick={handleRegisterSubmit}>
+                <Button color="white" bg='green.500' width="100%" mt={6} onClick={handleRegisterSubmit}>
                   Register
                 </Button>
               </TabPanel>

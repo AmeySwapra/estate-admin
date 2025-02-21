@@ -8,7 +8,7 @@ const Notification = () => {
       name: 'John Doe', 
       email: 'john@example.com', 
       phone: '+1234567890', 
-      message: 'I am interested in buying a 2-bedroom apartment in the city center. Please provide more details.', 
+      message: 'Do you offer bulk discounts on almonds and cashews?', 
       createdAt: '2025-02-17' 
     },
     { 
@@ -16,7 +16,7 @@ const Notification = () => {
       name: 'Jane Smith', 
       email: 'jane@example.com', 
       phone: '+1987654321', 
-      message: 'Can you send me information on any upcoming property auctions in the area?', 
+      message: 'Can you provide organic walnuts and pistachios?', 
       createdAt: '2025-02-16' 
     },
     { 
@@ -24,7 +24,7 @@ const Notification = () => {
       name: 'Chris Brown', 
       email: 'chris@example.com', 
       phone: '+1122334455', 
-      message: 'I am looking to rent a house with at least 3 bedrooms. Any suggestions?', 
+      message: 'I need a monthly subscription for mixed dry fruits. Do you have one?', 
       createdAt: '2025-02-15' 
     },
     { 
@@ -32,7 +32,7 @@ const Notification = () => {
       name: 'Emily Davis', 
       email: 'emily@example.com', 
       phone: '+5566778899', 
-      message: 'Please let me know about properties near the beach for investment purposes.', 
+      message: 'Do you sell roasted or raw nuts? I prefer unsalted options.', 
       createdAt: '2025-02-14' 
     },
     { 
@@ -40,7 +40,7 @@ const Notification = () => {
       name: 'Michael King', 
       email: 'michael@example.com', 
       phone: '+4455667788', 
-      message: 'Looking for a commercial property for a new business. Can you assist?', 
+      message: 'Looking for premium quality saffron. Do you have any in stock?', 
       createdAt: '2025-02-13' 
     },
     { 
@@ -48,7 +48,7 @@ const Notification = () => {
       name: 'Sarah Lee', 
       email: 'sarah@example.com', 
       phone: '+9988776655', 
-      message: 'I need help finding a family home in a quiet neighborhood. Any recommendations?', 
+      message: 'Can you suggest the best nuts for a healthy diet?', 
       createdAt: '2025-02-12' 
     },
     { 
@@ -56,7 +56,7 @@ const Notification = () => {
       name: 'David Martinez', 
       email: 'david@example.com', 
       phone: '+2233445566', 
-      message: 'I am interested in investing in rental properties. Can you provide more details on the market?', 
+      message: 'I want to buy dried figs and dates in bulk for my store. Can you provide pricing?', 
       createdAt: '2025-02-11' 
     },
     { 
@@ -64,7 +64,7 @@ const Notification = () => {
       name: 'Olivia White', 
       email: 'olivia@example.com', 
       phone: '+6677889900', 
-      message: 'Please send me a list of properties under $500,000 in the downtown area.', 
+      message: 'Do you have gift packs of mixed dry fruits for festivals?', 
       createdAt: '2025-02-10' 
     },
     { 
@@ -72,7 +72,7 @@ const Notification = () => {
       name: 'James Wilson', 
       email: 'james@example.com', 
       phone: '+3344556677', 
-      message: 'I would like to schedule a viewing of a few properties in the suburbs.', 
+      message: 'I am interested in flavored almonds. What varieties do you offer?', 
       createdAt: '2025-02-09' 
     },
     { 
@@ -80,7 +80,7 @@ const Notification = () => {
       name: 'Sophia Taylor', 
       email: 'sophia@example.com', 
       phone: '+7788991122', 
-      message: 'Can you send me more information about homes with a pool? I’m looking for something luxurious.', 
+      message: 'Do you ship internationally? I want to order dried apricots and raisins.', 
       createdAt: '2025-02-08' 
     },
   ]);
@@ -94,9 +94,17 @@ const Notification = () => {
 
   const totalPages = Math.ceil(messages.length / messagesPerPage);
 
+  const gradientBackgrounds = [
+    'linear-gradient(to bottom, #FFB6C1, #FFD700)',
+    'linear-gradient(to bottom, #FFA07A, #FF4500)',
+    'linear-gradient(to bottom, #98FB98, #2E8B57)',
+    'linear-gradient(to bottom, #87CEFA, #1E90FF)',
+    'linear-gradient(to bottom, #DDA0DD, #8A2BE2)',
+  ];
+
   return (
     <Box p={4}>
-      <Heading as="h3" size="lg" mb={4}>Recent Property Inquiries</Heading>
+      <Heading as="h3" size="lg" mb={4}>Recent Customer Inquiries</Heading>
 
       <Grid
         templateColumns={{ base: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}
@@ -105,7 +113,7 @@ const Notification = () => {
         {currentMessages.length === 0 ? (
           <Text>No notifications available.</Text>
         ) : (
-          currentMessages.map((message) => (
+          currentMessages.map((message, index) => (
             <Box
               key={message._id}
               p={4}
@@ -113,15 +121,14 @@ const Notification = () => {
               borderRadius="md"
               boxShadow="sm"
               width="100%"
-              bg="white"
-              background="linear-gradient(to bottom, #FFB6C1, #FFD700)"
-              _hover={{ bg: 'gray.100' }}
+              background={gradientBackgrounds[index % gradientBackgrounds.length]}
+              _hover={{ opacity: 0.9 }}
             >
               <Text fontWeight="bold">{message.name}</Text>
-              <Text color="gray.500">{message.email}</Text>
-              <Text color="gray.500">{message.phone}</Text>
+              <Text color="gray.700">{message.email}</Text>
+              <Text color="gray.700">{message.phone}</Text>
               <Text mt={2} noOfLines={2}>{message.message}</Text>
-              <Text fontSize="sm" color="gray.400" mt={2}>
+              <Text fontSize="sm" color="gray.600" mt={2}>
                 {message.createdAt}
               </Text>
               <Divider my={2} />
@@ -134,7 +141,8 @@ const Notification = () => {
         <Button
           onClick={() => setCurrentPage(currentPage - 1)}
           isDisabled={currentPage === 1}
-          colorScheme="teal"
+          color="white"
+          bg='green.500'
         >
           Previous
         </Button>
@@ -142,7 +150,8 @@ const Notification = () => {
         <Button
           onClick={() => setCurrentPage(currentPage + 1)}
           isDisabled={currentPage === totalPages}
-          colorScheme="teal"
+          color="white"
+          bg='green.500'
         >
           Next
         </Button>
